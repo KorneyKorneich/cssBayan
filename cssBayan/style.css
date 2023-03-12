@@ -14,18 +14,42 @@ input {
 .bayan-space {
     display: flex;
     flex-direction: column;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 10%;
+    margin-right: 5%;
     border: 1px solid black;
-    color: rgb(123, 123, 236);
-    
+    color: rgb(27, 27, 121);
+}
+@media screen and (hover:hover){
+    .bayan-space:hover{
+        color: black;
+    }
+    .itemText:hover > .icon{
+        transition: transform .35s;
+        transform: rotate(45deg);
+    }
+    .item:hover ~ .meme_body{
+        max-height: 1000px;
+        -webkit-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+    }
+}
+ @media screen and (min-width: 820px) {
 
-}
-.bayan-space:hover{
+    .meme_body{
+        width: 40%;
+        height: 200px;
+    }
+
+    .bayan-space {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+ }
+/* .bayan-space:hover{
     color: black;
-}
+} */
 .itemText {
-    background-color: blanchedalmond;
     border: 1px solid rgb(74, 74, 74);
     border-radius: 2px;
     display: flex;
@@ -35,31 +59,48 @@ input {
 .itemText p {
     display: block;
 }
-.itemText span{
+.itemText div{
+    font-size: 26px;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 40%;
     border: 1px solid black;
 }
+
+/* .itemText:hover > .icon{
+    transition: transform .35s;
+    transform: rotate(45deg);
+} */
 .item {
     
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 .meme_body{
-    display: none;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
     border: 1px solid black;
-    /* padding-left: 35%; */
-    /* margin-right: 30%; */
-    width: auto;
-    height: 100px;
+    /* width: 15em; */
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
 }
 .item:checked ~ .meme_body{
-    display: block;
-
+    max-height: 1000px;
+    -webkit-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+}
+.item:checked > .icon{
+    transform: rotate(45deg);
 }
 
-.item:hover ~ .meme_body{
-    display: block;
-    
-}
+/* .item:hover ~ .meme_body{
+    max-height: 1000px;
+    -webkit-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+} */
 
