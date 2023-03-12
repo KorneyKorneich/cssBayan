@@ -16,12 +16,12 @@ input {
     flex-direction: column;
     margin-left: 10%;
     margin-right: 5%;
-    border: 1px solid black;
     color: rgb(27, 27, 121);
 }
 @media screen and (hover:hover){
     .bayan-space:hover{
         color: black;
+        cursor: help;
     }
     .itemText:hover > .icon{
         transition: transform .35s;
@@ -32,6 +32,9 @@ input {
         -webkit-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
+    }
+    .meme_body:hover {
+        max-height: 1000px;
     }
 }
  @media screen and (min-width: 820px) {
@@ -46,9 +49,21 @@ input {
         margin-right: 20%;
     }
  }
-/* .bayan-space:hover{
-    color: black;
-} */
+
+ @media screen and (min-width: 1960px) {
+
+    .meme_body{
+        width: 40%;
+        height: 300px;
+    }
+
+    .bayan-space {
+        height: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+ }
+
 .itemText {
     border: 1px solid rgb(74, 74, 74);
     border-radius: 2px;
@@ -64,23 +79,12 @@ input {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 40%;
-    border: 1px solid black;
 }
 
-/* .itemText:hover > .icon{
-    transition: transform .35s;
-    transform: rotate(45deg);
-} */
-.item {
-    
-    /* margin-bottom: 20px; */
-}
 .meme_body{
     display: block;
     max-height: 0;
     overflow: hidden;
-    border: 1px solid black;
-    /* width: 15em; */
     margin-left: auto;
     margin-right: auto;
     -webkit-transition: .3s;
@@ -96,11 +100,4 @@ input {
 .item:checked > .icon{
     transform: rotate(45deg);
 }
-
-/* .item:hover ~ .meme_body{
-    max-height: 1000px;
-    -webkit-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
-} */
 
