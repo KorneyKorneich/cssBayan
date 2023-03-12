@@ -3,8 +3,8 @@
 }
 
 img{
-    /* width: 00px;
-    height: 00px; */
+    width: 100%;
+    height: 100%;
 }
 
 input {
@@ -14,14 +14,32 @@ input {
 .bayan-space {
     display: flex;
     flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 1px solid black;
+    color: rgb(123, 123, 236);
+    
 
+}
+.bayan-space:hover{
+    color: black;
 }
 .itemText {
     background-color: blanchedalmond;
     border: 1px solid rgb(74, 74, 74);
     border-radius: 2px;
-    display: block;
+    display: flex;
+    justify-content: space-around;
     padding: 1%;
+}
+.itemText p {
+    display: block;
+}
+.itemText span{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 40%;
+    border: 1px solid black;
 }
 .item {
     
@@ -30,7 +48,18 @@ input {
 .meme_body{
     display: none;
     border: 1px solid black;
+    /* padding-left: 35%; */
+    /* margin-right: 30%; */
+    width: auto;
+    height: 100px;
 }
 .item:checked ~ .meme_body{
     display: block;
+
 }
+
+.item:hover ~ .meme_body{
+    display: block;
+    
+}
+
